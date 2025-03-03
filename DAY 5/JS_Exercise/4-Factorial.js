@@ -6,3 +6,4 @@ const fact = (n) => {
 }
 
 console.log(fact(6));
+z
