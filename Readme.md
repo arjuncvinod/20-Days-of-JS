@@ -5,3 +5,4 @@
 [DAY 3](/DAY%203/)<br>
 [DAY 4](/DAY%204/)<br>
 [DAY 5](/DAY%205/)<br>
+[DAY 6](/DAY%206/)<br>
