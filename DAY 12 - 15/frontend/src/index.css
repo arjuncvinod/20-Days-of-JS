@@ -1,0 +1,26 @@
+/* Initial state before transition */
+.slide-in-left-enter {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  
+  /* State when transition is active */
+  .slide-in-left-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  /* Initial state before exit transition */
+  .slide-in-left-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* State when exit transition is active */
+  .slide-in-left-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  }
+  
