@@ -39,7 +39,7 @@ const UpdatePlace = () => {
   useEffect(() => {
     const fetchPlace = async () => {
       try {
-        const responseData = await sendRequest(`https://two0-days-of-js.onrender.com/api/places/${placeId}`);
+        const responseData = await sendRequest(`${import.meta.env.VITE_API_URL}/api/places/${placeId}`);
         setLoadedPlace(responseData.place);
         setFormData(
           {
@@ -65,7 +65,7 @@ const UpdatePlace = () => {
     event.preventDefault();
     try {
       await sendRequest(
-        `https://two0-days-of-js.onrender.com/api/places/${placeId}`,
+        `${import.meta.env.VITE_API_URL}/api/places/${placeId}`,
         'PATCH',
         JSON.stringify({
           title: formState.inputs.title.value,

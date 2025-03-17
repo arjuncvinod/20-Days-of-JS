@@ -36,7 +36,7 @@ function NewPlace() {
       formData.append('address', formState.inputs.address.value);
       formData.append('image', formState.inputs.image.value);
 
-      await sendRequest('https://two0-days-of-js.onrender.com/api/places/', 'POST', formData,{
+      await sendRequest(`${import.meta.env.VITE_API_URL}/api/places/`, 'POST', formData,{
         Authorization: 'Bearer ' + auth.token
       });
       navigate('/'); 

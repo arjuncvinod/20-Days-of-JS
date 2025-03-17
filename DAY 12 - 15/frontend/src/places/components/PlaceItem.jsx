@@ -36,7 +36,7 @@ function PlaceItem(props) {
   const confirmDeleteHandler = async () => {
     setShowConfirmModel(false);
     try {
-      await sendRequest(`https://two0-days-of-js.onrender.com/api/places/${props.id}`, 'DELETE',null,
+      await sendRequest(`${import.meta.env.VITE_API_URL}/api/places/${props.id}`, 'DELETE',null,
         {
           Authorization: `Bearer ${auth.token}`
         }
@@ -91,7 +91,7 @@ function PlaceItem(props) {
         <Card className="place-item__content">
           {isLoading && <LoadingSpinner asOverlay />}
           <div className="place-item__image">
-            <img src={`https://two0-days-of-js.onrender.com/${props.image}`} alt={props.title} />
+            <img src={`${import.meta.env.VITE_API_URL}/${props.image}`} alt={props.title} />
           </div>
           <div className="place-item__info">
             <h2>{props.title}</h2>

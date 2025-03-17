@@ -13,7 +13,7 @@ function UserPlaces() {
   useEffect(() => {
     const fetchPlaces = async () => {
       try {
-        const responseData = await sendRequest(`https://two0-days-of-js.onrender.com/api/places/user/${userId}`);
+        const responseData = await sendRequest(`${import.meta.env.VITE_API_URL}/api/places/user/${userId}`);
         setLoadedPlaces(responseData.places);
       } catch (error) {
         console.log(error);

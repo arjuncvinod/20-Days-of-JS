@@ -10,7 +10,7 @@ const UserItem = props => {
       <Card className="user-item__content">
         <Link to={`/${props.id}/places`}>
           <div className="user-item__image">
-            <Avatar image={`https://two0-days-of-js.onrender.com/${props.image}`} alt={props.name} />
+            <Avatar image={`${import.meta.env.VITE_API_URL}/${props.image}`} alt={props.name} />
           </div>
           <div className="user-item__info">
             <h2>{props.name}</h2>

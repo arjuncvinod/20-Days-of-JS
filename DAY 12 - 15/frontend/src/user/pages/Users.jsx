@@ -4,6 +4,7 @@ import ErrorModal from '../../shared/components/UIElements/ErrorModal';
 import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner';
 import { useHttpClient } from '../../shared/hooks/http-hook';
 
+
 function Users() {
     const {isLoading,sendRequest,error,clearError} = useHttpClient();
     const [loadedUsers, setLoadedUsers] = useState();
@@ -12,7 +13,7 @@ function Users() {
         const fetchUsers = async () => {
             try {
                
-                const responseData = await sendRequest('https://two0-days-of-js.onrender.com/api/users/');
+                const responseData = await sendRequest(`${import.meta.env.VITE_API_URL}/api/users/`);
             
                 setLoadedUsers(responseData.users);
             } catch (error) {
