@@ -12,7 +12,7 @@ function Users() {
         const fetchUsers = async () => {
             try {
                
-                const responseData = await sendRequest('http://localhost:5000/api/users/');
+                const responseData = await sendRequest('https://two0-days-of-js.onrender.com/api/users/');
             
                 setLoadedUsers(responseData.users);
             } catch (error) {

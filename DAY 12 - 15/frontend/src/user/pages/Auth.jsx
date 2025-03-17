@@ -60,7 +60,7 @@ function Auth() {
        
         if (isLoginMode) {
                 try{
-                    const responseData = await sendRequest('http://localhost:5000/api/users/login','POST',JSON.stringify({
+                    const responseData = await sendRequest('https://two0-days-of-js.onrender.com/api/users/login','POST',JSON.stringify({
                         email: formState.inputs.email.value,
                         password: formState.inputs.password.value
                     }),
@@ -80,7 +80,7 @@ function Auth() {
                 formData.append('name',formState.inputs.name.value);
                 formData.append('password',formState.inputs.password.value);
                 formData.append('image',formState.inputs.image.value);
-                const responseData = await sendRequest('http://localhost:5000/api/users/signup',
+                const responseData = await sendRequest('https://two0-days-of-js.onrender.com/api/users/signup',
                     'POST',formData);
     
                 auth.login(responseData.userId, responseData.token);

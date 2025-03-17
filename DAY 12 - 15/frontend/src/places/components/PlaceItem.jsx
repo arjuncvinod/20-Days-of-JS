@@ -15,10 +15,10 @@ function PlaceItem(props) {
   const [showMap, setShowMap] = useState(false);
   const [showConfirmModel, setShowConfirmModel] = useState(false);
 
-  const openMapHandler = () => {
-    console.log('Opening map...');
-    setShowMap(true);
-  };
+  // const openMapHandler = () => {
+  //   console.log('Opening map...');
+  //   setShowMap(true);
+  // };
 
   const closeMapHandler = () => {
     console.log('Closing map...');
@@ -36,7 +36,7 @@ function PlaceItem(props) {
   const confirmDeleteHandler = async () => {
     setShowConfirmModel(false);
     try {
-      await sendRequest(`http://localhost:5000/api/places/${props.id}`, 'DELETE',null,
+      await sendRequest(`https://two0-days-of-js.onrender.com/api/places/${props.id}`, 'DELETE',null,
         {
           Authorization: `Bearer ${auth.token}`
         }
@@ -91,7 +91,7 @@ function PlaceItem(props) {
         <Card className="place-item__content">
           {isLoading && <LoadingSpinner asOverlay />}
           <div className="place-item__image">
-            <img src={`http://localhost:5000/${props.image}`} alt={props.title} />
+            <img src={`https://two0-days-of-js.onrender.com/${props.image}`} alt={props.title} />
           </div>
           <div className="place-item__info">
             <h2>{props.title}</h2>
